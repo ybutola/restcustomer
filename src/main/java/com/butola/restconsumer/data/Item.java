@@ -1,15 +1,12 @@
 package com.butola.restconsumer.data;
 
-/**
- * Created by yogibutola on 8/25/18.
- */
 public class Item {
 
     Long itemID;
 
-    String name;
+    String itemName;
 
-    String description;
+    String itemDescription;
 
     public Long getItemID() {
         return itemID;
@@ -19,19 +16,19 @@ public class Item {
         this.itemID = itemID;
     }
 
-    public String getName() {
-        return name;
+    public String getItemName() {
+        return itemName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
     }
 
-    public String getDescription() {
-        return description;
+    public String getItemDescription() {
+        return itemDescription;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setItemDescription(String itemDescription) {
+        this.itemDescription = itemDescription;
     }
 }
