@@ -18,7 +18,7 @@ public class SwaggerConfig {
     public Docket restProducerApi() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.butola.restcustomer.controllers"))
+                .apis(RequestHandlerSelectors.basePackage("com.butola.restconsumer.controllers"))
                 .paths(PathSelectors.regex("/restconsumer.*"))
                 .build();
     }

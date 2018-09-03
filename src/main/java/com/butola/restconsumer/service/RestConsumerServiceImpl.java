@@ -7,7 +7,7 @@ import org.springframework.web.client.RestTemplate;
 /**
  * Created by yogibutola on 9/2/18.
  */
-public class RestCustomerServiceImpl implements RestCustomerService {
+public class RestConsumerServiceImpl implements RestConsumerService {
 
     @Autowired
     RestTemplate restTemplate;
