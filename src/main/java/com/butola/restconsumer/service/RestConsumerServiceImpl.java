@@ -15,7 +15,7 @@ public class RestConsumerServiceImpl implements RestConsumerService {
     @Override
     public String processItemInfo(Long itemId) {
         ResponseEntity<String> response
-                = restTemplate.getForEntity("http://localhost:8081/restproducer/" + itemId, String.class);
+                = restTemplate.getForEntity("http://localhost:8083/restproducer/" + itemId, String.class);
 
         if (response.getStatusCode() == HttpStatus.FOUND) {
             return processInformation(response.getBody());

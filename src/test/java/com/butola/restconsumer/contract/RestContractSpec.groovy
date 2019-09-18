@@ -59,7 +59,7 @@ class RestContractSpec extends Specification {
 
     def validate_2_shouldReturnAnItem() throws Exception {
         when:
-        ResponseEntity<String> responseEntity = restTemplate.getForEntity("http://localhost:8080/restproducer/2", String.class)
+        ResponseEntity<String> responseEntity = restTemplate.getForEntity("http://localhost:8080/restproducer/1", String.class)
 
         then:
         BDDAssertions.then(responseEntity.statusCode).isEqualTo(HttpStatus.FOUND)
@@ -68,7 +68,7 @@ class RestContractSpec extends Specification {
         and:
         DocumentContext parsedJson = JsonPath.parse(responseEntity.body)
         assertThatJson(parsedJson).field("['itemName']").isEqualTo("newItem")
-        assertThatJson(parsedJson).field("['itemID']").isEqualTo("2")
+        assertThatJson(parsedJson).field("['itemID']").isEqualTo("1")
         assertThatJson(parsedJson).field("['itemDescription']").isEqualTo("new description")
     }
 }
